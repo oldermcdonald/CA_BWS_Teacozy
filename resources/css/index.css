@@ -1,10 +1,9 @@
 /* Universal selectors */
-
 body {
-  background-color: grey;
-
+  background-color: black;
   font-family: Helvetica;
   color: seashell;
+  font-weight: bold;
   text-align: center;
   opacity: 0.9;
 }
@@ -13,7 +12,6 @@ body {
 
 
 /* Header */
-
 header {
   display: flex;
   align-items: center;
@@ -49,8 +47,9 @@ nav a, nav a:hover, nav a:visited {
 
 /* Main Content */
 .main-content {
-  padding-top: 70px;
+  padding-top: 70px; /* so not hidden behind header */
 }
+
 
 
 
@@ -73,35 +72,35 @@ nav a, nav a:hover, nav a:visited {
 
 
 
+
+
+
 /* Tea of the Month Section */
 .container-second {
   width: 1000px;
   margin: auto;
-  border: 1px solid black;
+  padding-bottom: 30px;
 }
 
-
-
-/* Product */
+/* Product Boxes */
 .product-flex{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
-
 
 .product-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 22px;
+  padding: 10px;
 }
-
 
 .product-box img {
   height: 200px;
   width: 300px;
 }
-
 
 .product-box span {
   padding-top: 5px;
@@ -110,10 +109,58 @@ nav a, nav a:hover, nav a:visited {
 
 
 
-/* footer */
+
+
+
+/* Locations */
+
+.container-third {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("./../images/img-locations-background.jpg");
+  height: 500px;
+}
+
+.location-box {
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  padding: 0px;
+}
+
+.location-box h3 {
+  font-size: 30px;
+  padding: 20px;
+  margin: auto;
+}
+
+.location-box p {
+  font-weight: normal;
+  padding: 20px;
+  margin: auto;
+}
+
+
+
+
+
+
+/* Footer */
 footer {
-  text-align: left;
-  padding-top: 50px;
-  padding-left: 10px;
+  display: block;
+  height: 200px;
+  padding-top: 10px;
   color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  display: block;
+  text-align: left;
+  padding-left: 20px;
 }
